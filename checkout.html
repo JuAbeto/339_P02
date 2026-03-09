@@ -4,146 +4,144 @@
     <meta charset="utf-8" />
     <title>Colour Quest Studio — Checkout template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="img/mascot.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 
     <!-- heading font (falls back to system-ui if blocked) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;750&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-
-    
 </head>
 
-<body>
-  <nav class="toc" aria-label="Site navigation"><div class="inner">
-      <a href="landing.html">Landing Page</a>
-      <a href="about.html">About Page</a>
-      <a href="products.html">Products page</a>
-      <a href="product-detail.html">Product detail</a>
-      <a href="checkout.html" aria-current="page">Checkout page</a>
-    </div></nav>
-  <div class="wrap">
-    <header class="site">
-      <div class="kicker">P01 — Final // Template</div>
-      <h1>Checkout</h1>
-      <p class="sub">Responsive checkout page with navigation, cart summary, and payment form.</p>
-    </header>
-
-    <section class="block" id="checkout">
-      <div class="section-title">
-        <h2>Order flow</h2>
-        <p>Cart and payment sit side-by-side on wide screens and stack on smaller screens.</p>
-      </div>
-
-      <div class="grid two">
-        <div class="card" aria-label="Cart summary">
-          <h3 class="kicker" style="margin:0 0 .75rem; font-family:var(--font-head); color:var(--text-muted);">Cart</h3>
-
-          <div class="grid" style="gap:1rem;">
-            <div style="display:flex; gap:1rem; align-items:flex-start; border:1px solid var(--line-subtle); border-radius:12px; padding:1rem;">
-              <img src="img/project-creative-freedom.jpeg" alt="Creative Freedom key art" style="width:92px; height:70px; object-fit:cover; border-radius:10px; border:1px solid var(--line-subtle);">
-              <div style="min-width:0;">
-                <h4 style="margin:0 0 .25rem; font-size:1rem;">Creative Freedom (Pre‑order)</h4>
-                <div class="meta-row" style="margin:0;"><span>Qty: 1</span><span>$19.99</span></div>
-                <p style="margin:.5rem 0 0;"><a class="inline" href="products.html#listing">Edit</a></p>
-              </div>
-            </div>
-
-            <div style="display:flex; gap:1rem; align-items:flex-start; border:1px solid var(--line-subtle); border-radius:12px; padding:1rem;">
-              <img src="img/project-blacksite.jpeg" alt="Blacksite Web Story key art" style="width:92px; height:70px; object-fit:cover; border-radius:10px; border:1px solid var(--line-subtle);">
-              <div style="min-width:0;">
-                <h4 style="margin:0 0 .25rem; font-size:1rem;">Blacksite — Chapter Pack</h4>
-                <div class="meta-row" style="margin:0;"><span>Qty: 1</span><span>$9.99</span></div>
-                <p style="margin:.5rem 0 0;"><a class="inline" href="products.html#listing">Edit</a></p>
-              </div>
-            </div>
-
-            <div style="border-top:1px solid var(--line-subtle); padding-top:1rem;">
-              <div class="meta-row"><span>Subtotal</span><span>$29.98</span></div>
-              <div class="meta-row"><span>Estimated tax</span><span>$3.90</span></div>
-              <div class="meta-row" style="font-weight:700; color:var(--text-primary);"><span>Total</span><span>$33.88</span></div>
-            </div>
-
-            <div style="display:flex; gap:.6rem; flex-wrap:wrap;">
-              <a class="btn" href="products.html">Continue shopping</a>
-              <a class="btn" href="index.html#templates">Back to templates</a>
-            </div>
-          </div>
+<body class="page-checkout">
+    <nav class="toc" aria-label="Site navigation">
+        <div class="inner">
+            <a href="landing.html">Landing Page</a>
+            <a href="about.html">About Page</a>
+            <a href="products.html">Products Page</a>
+            <a href="product-detail.html">Product Detail</a>
+            <a href="checkout.html" aria-current="page">Checkout Page</a>
         </div>
+    </nav>
+    <div class="wrap">
+        <header class="site">
+            <div class="kicker">P01 — Final // Template</div>
+            <h1>Checkout</h1>
+            <p class="sub">Please be sure to review cart details before purchasing.</p>
+        </header>
 
-        <div class="card" aria-label="Payment form">
-          <h3 class="kicker" style="margin:0 0 .75rem; font-family:var(--font-head); color:var(--text-muted);">Payment</h3>
-
-          <form class="grid" style="gap:1rem;">
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        <section class="block" id="checkout">
+            <div class="section-title">
+                <h2>Product Summary</h2>
             </div>
 
-            <div class="grid two" style="gap:1rem;">
-              <div>
-                <label for="first">First name</label>
-                <input id="first" name="first" type="text" placeholder="First" required>
-              </div>
-              <div>
-                <label for="last">Last name</label>
-                <input id="last" name="last" type="text" placeholder="Last" required>
-              </div>
+            <div class="grid two">
+                <div class="card" aria-label="Cart summary">
+                    <h3 class="kicker">Cart</h3>
+
+                    <div class="grid checkout-stack">
+                        <div class="cart-item">
+                            <img class="cart-thumb" src="img/project-creative-freedom.jpeg" alt="Creative Freedom key art">
+                            <div class="cart-item-body">
+                                <h4 class="cart-title">Blacksite Web Story</h4>
+                                <div class="meta-row"><span>Qty: 1</span><span>$19.99</span></div>
+                                <p class="cart-edit"><a class="inline" href="products.html#listing">Edit</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-totals">
+                        <div class="meta-row"><span>Subtotal</span><span>$9.99</span></div>
+                        <div class="meta-row"><span>Estimated tax</span><span>$1.10</span></div>
+                        <div class="meta-row total"><span>Total</span><span>$11.09</span></div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <a class="btn" href="products.html">Continue shopping</a>
+                    </div>
+                </div>
             </div>
 
-            <div>
-              <label for="card">Card number</label>
-              <input id="card" name="card" inputmode="numeric" placeholder="1234 5678 9012 3456" required>
-              <div class="help">This is a template form; it does not process real payments.</div>
-            </div>
+            <div class="card" aria-label="Payment form">
+                <h3 class="kicker">Payment</h3>
 
-            <div class="grid two" style="gap:1rem;">
-              <div>
-                <label for="exp">Expiry</label>
-                <input id="exp" name="exp" placeholder="MM / YY" required>
-              </div>
-              <div>
-                <label for="cvc">CVC</label>
-                <input id="cvc" name="cvc" placeholder="123" required>
-              </div>
-            </div>
+                <form class="grid checkout-stack">
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="name@example.com" required>
+                    </div>
 
-            <div>
-              <label for="addr">Billing address</label>
-              <input id="addr" name="addr" type="text" placeholder="Street address" required>
-            </div>
+                    <div class="grid two" style="gap:1rem;">
+                        <div>
+                            <label for="first">First name</label>
+                            <input id="first" name="first" type="text" placeholder="First" required>
+                        </div>
+                        <div>
+                            <label for="last">Last name</label>
+                            <input id="last" name="last" type="text" placeholder="Last" required>
+                        </div>
+                    </div>
 
-            <div class="grid two" style="gap:1rem;">
-              <div>
-                <label for="city">City</label>
-                <input id="city" name="city" type="text" placeholder="City" required>
-              </div>
-              <div>
-                <label for="postal">Postal code</label>
-                <input id="postal" name="postal" type="text" placeholder="A1A 1A1" required>
-              </div>
-            </div>
+                    <div>
+                        <label for="card">Card number</label>
+                        <input id="card" name="card" inputmode="numeric" placeholder="1234 5678 9012 3456" required>
+                    </div>
 
-            <button class="btn primary" type="submit" style="width:100%;">Place order</button>
-          </form>
-        </div>
-      </div>
+                    <div class="grid two" style="gap:1rem;">
+                        <div>
+                            <label for="exp">Expiry</label>
+                            <input id="exp" name="exp" placeholder="MM / YY" required>
+                        </div>
+                        <div>
+                            <label for="cvc">CVC</label>
+                            <input id="cvc" name="cvc" placeholder="123" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="addr">Billing address</label>
+                        <input id="addr" name="addr" type="text" placeholder="Street address" required>
+                    </div>
+
+                    <div class="grid two" style="gap:1rem;">
+                        <div>
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text" placeholder="City" required>
+                        </div>
+                        <div>
+                            <label for="postal">Postal code</label>
+                            <input id="postal" name="postal" type="text" placeholder="A1A 1A1" required>
+                        </div>
+                    </div>
+
+                    <button class="btn primary" type="submit" style="width:100%;">Place order</button>
+                </form>
+            </div>
+    </div>
     </section>
 
     <footer id="references">
-      <p style="margin:0 0 .5rem; font-family:var(--font-head); font-weight:800;">References & citations</p>
+        <p class="footer-title">References & citations</p>
 
-      <p class="help" style="margin:.25rem 0 1rem;">
-          Original work: All project art was made by Junniel.
-      </p>
+        <p class="help help--refs">
+            Original work: All project art was made by Junniel.
+        </p>
+        <p class="help help--refs">
+            View company <a class="inline" href="index.html">style guide here</a>
+        </p>
+        <p class="help help--refs">
+            View References <a class="inline" href="references.html">compiled references here</a>
+        </p>
+        <p class="help help--refs">
+            View Repo <a class="inline" href="https://github.com/JuAbeto/339_P02">https://github.com/JuAbeto/339_P02</a>
+        </p>
 
-      <p style="margin:0 0 .35rem; font-family:var(--font-head); font-weight:800;">Fonts</p>
-      <ul style="margin:.25rem 0 0; color:var(--text-muted);">
-        <li>Google Fonts. (n.d.). <em>Inter</em>. <a class="inline" href="https://fonts.google.com/specimen/Inter">https://fonts.google.com/specimen/Inter</a></li>
-        <li>Google Fonts. (n.d.). <em>Roboto Mono</em>. <a class="inline" href="https://fonts.google.com/specimen/Roboto+Mono">https://fonts.google.com/specimen/Roboto+Mono</a></li>
-      </ul>
+        <p class="footer-subtitle">Fonts</p>
+        <ul class="footer-list">
+            <li>Google Fonts. (n.d.). <em>Inter</em>. <a class="inline" href="https://fonts.google.com/specimen/Inter">https://fonts.google.com/specimen/Inter</a></li>
+            <li>Google Fonts. (n.d.). <em>Roboto Mono</em>. <a class="inline" href="https://fonts.google.com/specimen/Roboto+Mono">https://fonts.google.com/specimen/Roboto+Mono</a></li>
+        </ul>
     </footer>
-  </div>
+    </div>
 </body>
 </html>
